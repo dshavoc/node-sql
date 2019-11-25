@@ -26,13 +26,20 @@ window.onload = function() {	//waits for entire code to be downloaded
 };
 
 function serverListener() {
-/*
+
     socket.on(
-        'hi',
+        'sqlData',
         function(data) {
-            appendOutput("Lightbox server has performed the super secret handshake");
+            //Update Bootstrap UI as appropriate for this data
+            
+            appendOutput("sqlData has been received:");
+            appendOutput(JSON.stringify(data));     //Debug value only. We'll operate on the object in its native form
+            
+            console.log(data);
+            console.log(JSON.stringify(data));
+            
         }
-    );*/
+    );
 
     socket.on(
         'ack',
